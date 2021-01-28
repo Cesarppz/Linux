@@ -1,0 +1,4 @@
+,escalas,precios
+0,"[{'Modelo_avion': 'Airbus 320-200', 'Partida': 'EZE'}, {'Modelo_avion': 'Boeing 787-800', 'Partida': 'SCL'}, {'Modelo_avion': 'Boeing 777-300', 'Partida': 'GRU'}]","[{'Nombre tarifa': 'LIGHT', 'Precio': '524'}, {'Nombre tarifa': 'PLUS', 'Precio': '587'}, {'Nombre tarifa': 'TOP', 'Precio': '660'}]"
+1,"[{'Modelo_avion': 'Airbus 320-200', 'Partida': 'EZE'}, {'Modelo_avion': 'Boeing 787-800', 'Partida': 'SCL'}, {'Modelo_avion': '330', 'Partida': 'GRU'}]","[{'Nombre tarifa': 'PLUS', 'Precio': '958'}, {'Nombre tarifa': 'TOP', 'Precio': '1065'}]"
+2,"[{'Modelo_avion': 'Airbus 320-200', 'Partida': 'EZE'}, {'Modelo_avion': 'Airbus 320-200', 'Partida': 'LIM'}, {'Modelo_avion': '330', 'Partida': 'GRU'}]","[{'Nombre tarifa': 'PLUS', 'Precio': '735'}, {'Nombre tarifa': 'TOP', 'Precio': '822'}]"
