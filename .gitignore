@@ -141,5 +141,5 @@ cython_debug/
 google-cloud-sdk/
 
 # scrpy
-.cfg
-.yml
+*.cfg
+*.yml
