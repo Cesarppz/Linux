@@ -138,4 +138,8 @@ dmypy.json
 cython_debug/
 
 #Crapeta de google cloud 
-/google-cloud-sdk/
+google-cloud-sdk/
+
+# scrpy
+.cfg
+.yml
