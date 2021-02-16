@@ -28,5 +28,5 @@ news_sites:
 
       title_attr_type: 'class'
       title_attr: 'article-title'
-      title_etq: 'div'
+      title_etq: 'h1'
   

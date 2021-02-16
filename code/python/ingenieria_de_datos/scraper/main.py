@@ -49,7 +49,7 @@ def _fecth_article(site_id,host,link):
     except (HTTPError,MaxRetryError) :
         loggin.warning('Error while try fetching',exc_info=True)
 
-    if article and not article.body or not article.title:     
+    if article and not article.body :     
         loggin.warning('*'+'Error, the article has not body'+'*')
         return None
 
@@ -71,7 +71,7 @@ def _news_sites(site_id):
             loggin.info('Article fetched!!!')
             print(article.title)
             articles.append(article)
-        print('\n')
+        #print('\n')
     print((len(articles)))
 
     _save_data(articles,site_id)

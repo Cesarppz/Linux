@@ -5,6 +5,7 @@ from common import config
 class NewsPages:                          #Clase padre, de una pag común
     def __init__(self, site_id , url ):
         self._site_id = site_id
+        self._url = url
         self._config = config()['news_sites'][site_id]
         self._query = self._config['query']
         self._html = None
@@ -25,6 +26,7 @@ class NewsPages:                          #Clase padre, de una pag común
 class Pages(NewsPages):                #Clase de un artículo
     def __init__(self,site_id,url):
         super().__init__(site_id,url)
+         
 
     @property
     def body(self):
@@ -38,7 +40,8 @@ class Pages(NewsPages):                #Clase de un artículo
         
         if self._site_id == 'elpais':
             try:
-                res = set(link.p.get_text() for link in links_list)
+                #print(links_list)
+                res = set(link.get_text() for link in links_list)
                 return res
             except Exception as e:
                 print('ERROR',e) 
@@ -52,7 +55,11 @@ class Pages(NewsPages):                #Clase de un artículo
             return link.get_text().strip()
         except Exception as e:
             print(e)
-
+            return None
+    
+    @property
+    def url(self):
+        return self._url if self._url else '' 
 
 
 
