@@ -1,0 +1,32 @@
+news_sites:
+  eluniversal:
+    url: 'https://www.eluniversal.com/'
+    query: 
+      article_link_attr_type : 'class'
+      article_link_attr : 'title'
+      article_link_etq : 'a'
+      
+      #body: '.note-text'
+      body_attr_type: 'class'
+      body_attr: 'note-text'
+      body_etq: 'div'
+
+      title_attr_type: 'id'
+      title_attr: 'titulo'
+      title_etq: 'a'
+
+  elpais:
+    url: 'https://www.pagina12.com.ar/'
+    query: 
+      article_link_attr_type : 'class'
+      article_link_attr : 'article-title'
+      article_link_etq : 'div'
+      
+      body_attr_type: 'class'
+      body_attr: 'article-text'
+      body_etq: 'div' 
+
+      title_attr_type: 'class'
+      title_attr: 'article-title'
+      title_etq: 'div'
+  
