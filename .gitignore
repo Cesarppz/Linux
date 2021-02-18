@@ -144,3 +144,4 @@ google-cloud-sdk/
 *.cfg
 *.yml
 *.csv
+.csv
