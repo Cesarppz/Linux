@@ -145,3 +145,7 @@ google-cloud-sdk/
 *.yml
 *.csv
 .csv
+
+#image
+*.jpg
+*.png
