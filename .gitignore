@@ -149,3 +149,6 @@ google-cloud-sdk/
 #image
 *.jpg
 *.png
+
+#Spark
+archivos_salida/
