@@ -152,3 +152,6 @@ google-cloud-sdk/
 
 #Spark
 archivos_salida/
+
+#bash 
+git.sh
