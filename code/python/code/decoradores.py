@@ -1,3 +1,4 @@
+#!/usr/bin/python3.8
 def decorador(funcion_parametro):
     
     def funcion_interna(*arg):
