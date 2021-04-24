@@ -7,7 +7,7 @@ class Article(Base):
     
     id        = Column(String(200),primary_key=True)
     body      = Column(Text())
-    title     = Column(String(100))
+    title     = Column(Text())
     url       = Column(String(255),unique=True)
     host      = Column(String(60))
     num_title = Column(Integer)

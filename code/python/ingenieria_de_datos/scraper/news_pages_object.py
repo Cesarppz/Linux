@@ -46,8 +46,11 @@ class Pages(NewsPages):                #Clase de un artículo
             except Exception as e:
                 print('ERROR',e) 
         else:
-            res = links_list[0].get_text().strip()
-            return res
+            try:
+                res = links_list[0].get_text().strip()
+                return res
+            except Exception as e:
+                pass
     @property
     def title(self):
         try:
