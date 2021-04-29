@@ -145,6 +145,12 @@ google-cloud-sdk/
 *.yml
 *.csv
 .csv
+*pract/[^pract.py]
+#*settings.py
+#*pipelines.py
+#*middlewares.py
+#*__init__.py
+
 
 #image
 *.jpg
@@ -155,3 +161,6 @@ archivos_salida/
 
 #bash 
 git.sh
+
+
+*data/
