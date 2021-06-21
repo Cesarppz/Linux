@@ -1,0 +1,19 @@
+alias lsl='ls -alh'
+alias gts='git status'
+alias gta='git add .'
+alias run='xgd-open'
+alias runv='sudo /etc/init.d/xrdp start'
+alias stopv='sudo /etc/init.d/xrdp stop'
+alias virtualm='/etc/init.d/xrdp'
+alias viewip='ip addr'
+alias casa='cd //mnt/c/Users/cesar/Desktop/'
+alias jn='jupyter notebook'
+alias jl='jupyter lab'
+alias sqlstart='sudo service mysql start'
+# Path
+export PATH=~/anaconda3/bin:$PATH
+export JUPYTERLAB_DIR="$HOME/.local/share/jupyter/"
+
+
+
+
