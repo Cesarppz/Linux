@@ -18,7 +18,7 @@ QUERY = """SELECT * FROM test_table WHERE lower(user_name) LIKE 'c%' """
 
 if __name__ == '__main__':
     try:
-        connect = psycopg2.Connect("dbname='nombre' user='user_name' password='clave' host='localhost'")
+        connect = psycopg2.connect("dbname='test' user='postgres' password='c20022007' host='localhost'")
         
         with connect.cursor() as cursor:
             # Drop table if exist
@@ -47,7 +47,7 @@ if __name__ == '__main__':
                 print(register)
             
 
-    except pymysql.err.OperationalError as err:
+    except psycopg2.OperationalError as err:
         print('Error in the conexion')
         print(err)
 
