@@ -1,0 +1,38 @@
+
+.container{
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    max-width: 100%;
+    max-height: 100%;
+    width: 58rem;
+    height: 50%;
+    background-color: #7C7C7C;
+
+}
+
+.text{
+    color: white;
+}
+
+.title{
+    color: #BBE5ED;
+    text-align: center;
+}
+td {
+    border:solid 1px;
+    border-color: black;
+}
+.fa-solid.fa-star{
+    color: #fca103;
+    border-color: black;
+
+}

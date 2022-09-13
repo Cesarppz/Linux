@@ -1,0 +1,7 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    <h3> Los nombres son: </h3>
+    {% for i in users %}
+        <p>{{i}}</p>
+    {% endfor%}
+{% endblock %}

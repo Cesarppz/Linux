@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    {% from '_macro.html' import show_forms %}
+    <form method="POST" id="login-form">
+        {{ show_forms(form.username) }}
+        <br>
+        {{ show_forms(form.password) }}
+        <br>
+        <br>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input type="submit" value="Submit">
+    </form>
+    {% if retry == True %}
+        <br>
+        <br>
+        <div>
+            <p>Puedes ir a <a href="/login">LOGIN</a>  login si no tienes una cuenta</p>
+        </div>
+    {% endif %}
+
+    
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    {% from '_macro.html' import show_forms %}
+    <form method="POST" id="login-form">
+        <div>{{ show_forms(form.username) }}</div>
+        <br>
+        <div>{{ show_forms(form.email) }}</div>
+        <br>
+        <div>{{ show_forms(form.password) }}</div>
+        <br>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input type="submit" value="Submit">
+    </form>
+    
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/stylessheet.css') }}" />
+   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  -->
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.js')}}"></script>
+    <title>Curso Flask</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {%if messages %}
+            <ul>
+                {%for message in messages %}
+                    <li>{{ message }}</li> 
+                {%endfor %}
+            </li>
+        {%endif%}
+    {%endwith%}
+    <h2 class="title_page">Bienvenido al curso de flask</h2>
+    <p class="marca">&copy; Curso Flask</p>
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div>
+        <br>
+        <br>
+        <br>
+        {%if request.path not in ["/",'/signup','/login'] %}
+            <a href="/">Home</a>
+        {%endif%}
+    </div>
+
+</body>
+</html>

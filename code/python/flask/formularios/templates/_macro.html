@@ -1,0 +1,15 @@
+{% macro show_forms(field) %}
+    <td> {{ field.label }}
+    <dd> {{ field(**kwargs)|safe }}
+    {% if field.errors %}
+        <ul>
+            {% for error in field.errors %}
+                {%if error == 'Error el usuario ya se encuetra registrado'%}
+                    <li>{{ error }}, puede iniciar sessión aquí <a href="/signup">SIGNUP</a> </li>
+                {% else %}
+                <li> {{ error }} </li>
+                {%endif%}
+            {%endfor%}
+        </ul>
+    {% endif %}
+{% endmacro %}

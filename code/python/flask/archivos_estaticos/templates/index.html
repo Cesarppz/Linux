@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Flask</title>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+    <footer>
+        <h1>Hola mundo !</h1>
+        <p>&copy; Curso Flask</p>
+        {% from '_macro.html' import show_list_h %}
+        {{ show_list_h('Perrito') }}
+    </footer>
+
+    <img src="{{ url_for('static',filename='images/perrito.jpg') }}" alt="Perrito lindo" width="250">
+    <script type="text/javascript" src="{{ url_for('static',filename='js/jquery.js') }}">
+
+    </script> 
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% extends 'base/base.html' %}
+{% block content %}
+    {% from '_macro.html' import show_forms %}
+    <form style='padding-right: 60px;' class='container' method="POST">
+        <br>
+        <div>
+            {{ show_forms(form.comment) }}
+        </div>
+        <br>
+        <div>
+            {{ form.honeypot }}
+        </div>
+        <br>
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
