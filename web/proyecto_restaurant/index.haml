@@ -1,0 +1,72 @@
+!!!5
+%html{class:"no-js", lang: "en"}
+    %head
+        %meta{charset:"utf-8"}
+        %title Oriente Grill
+        %meta{name:"description", content:"Come las mejores parrilas del oriente de país"}
+        %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+        -# Normalize, para normalizar las hojas de estilos
+        %link{rel:"stylesheet", href:"https://necolas.github.io/normalize.css/8.0.1/normalize.css"}
+        -# Flex Grid, para aplicar flex display de una manera facil
+        %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css", type:"text/css"}
+        -# Bootstrap 
+        %link{href:"https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css", rel:"stylesheet" ,integrity:"sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT", crossorigin:"anonymous"}
+        -# Css
+        %link{rel:"stylesheet", href:"./assets/styles/main.css", type:"text/css"}
+        -# Iconos 
+        %link{rel:"stylesheet", href:"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"}
+        -# Fonts
+        %link{rel:"preconnect", href:"https://fonts.googleapis.com"}
+        %link{rel:"preconnect", href:"https://fonts.gstatic.com"}
+        %link{href:"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700;1,800&display=swap",rel:"stylesheet"}
+        -# %link{href:"https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;1,100;1,200;1,700;1,900&display=swap", rel:"stylesheet"}
+        
+
+        -# Modernizer
+        %script{src:"js/vendor/modernizr-2.8.3.min.js"}
+    %body
+        ="<!--[if lt IE 8]>"
+        %p{class:"browserupgrade"}
+            Estás usando un navegador
+            %strong desactualizado.
+            Por favor
+            %a{href:"http://browsehappy.com/"}
+                actualiza tu navegador
+                para una mejor experiencia
+        ="<![endif]-->"
+        .video-container
+            %video{autoplay:true,loop:true,muted:true,width:1280, height:720, poster:"./assets/media/images/screenshot.png"}
+                %source{src:"./assets/media/videos/mp4/main_video.mp4", type: "video/mp4"}
+                %source{src:"./assets/media/videos/webm/main_video.webm", type: "video/webm"}
+        
+        .row.full-height.center-xs.middle-xs.relative.up
+            .col-xs-12
+                .box.white-text
+                    %img{src:"./assets/media/images/logo1.png", width:400}
+                    -# %h1='Steak House'
+                    %p#is-open.montserrat.noraml-text.availability
+                        %i.bi.bi-clock
+                        Estamos Abiertos
+            %nav#navigation.fixed.white-text.navbar.navbar-expand-md.menu
+                -menuc = ["Home", "Menú", "Galería", "Contacto", "Cómo llegar"]
+                .collapse.navbar-collapse
+                    %ul.navbar-nav
+                        -menuc.each do |item|
+                            %li
+                                %a.nav{href:"#"}= item
+
+            .absolute.medium-large.montserrat-italic.bg-color.white-text.bottom
+            #description
+                .row.middle-xs.center-xs
+                    .col-xs-7.col-sm-6.white-text.montserrat-italic.slogan
+                        La casa de la carne por excelencia! 
+                    .col-xs.hidden
+                        .box
+                            %nav.text-right.menu.navbar-nav.navbar-expand-lg
+                                %ul.navbar-nav
+                                    -menuc.each do |item|
+                                        %li.nav-item
+                                            %a.nav{href:"#"}= item 
+                
+        .full-height
+               
